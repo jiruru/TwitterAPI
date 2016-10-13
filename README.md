@@ -1,0 +1,34 @@
+## 動作確認手順
+
+
+'bundle install'
+
+
+'rake db:migrate'
+
+
+'rails server'
+
+
+の順番でコマンドを打ったあと
+'http://localhost:3000/'にアクセスしてください。
+
+Login画面
+![](https://lh3.googleusercontent.com/Ihq2D_qm9CKWaICHRQEWRr0lbniEp7Hz7r-XWbmPzHg_7qz-C38E3pnmPgQDuNnjVK_LwYpqqp_MEwdrGKy1wEzdRZVVbb_Cn3qdSYnk4AycA5UVfB5-SncFNjqSw013lwIy57MI8brkBAmnawB0WRdoZQPAfNlCgOfYIN9gaDskxuk9oZS0CAvir50HDcY1ouazRwUlwLMrApDvTs21kBwvd7jwFwMqtmCKHc8IkCLcYn9ER-snKdyrZI5ejDwaxBkE1WWAdSOd1BM1l9Gs4Ch0zVEZk8RZE4XqZgmKCIU84ZIaBfpocAOqGA-dso06LKESkt4S934JAz50-jKn8lRo0FGo3Dmvcy04dRCSdtrNqHcXJ5wLQHiDXwq1EZIaEmHnNXRexy702g3NeJtLVVJD2SHaYLF846ARQ9K_8JrUmUxkN2HLXzPYHgRCKfGtL9uxs3V3NuLUgdcVw1D1AyhR8AY1P-lc70a4gkEhhIX46mVuBps1LO0ryOgm_x7ZS8n0XmmbDl7SvcqNGWZsNuV_6lfjmCnpb-s7KLYQQyPwYm1UXU3GphnWM55BGA8EPqds4ziPwIOWlk7xZ3mTkvsqsf_sTVQ=w828-h736-no)
+画像の下のSign upからユーザー登録を行ってください。
+
+
+home画面
+![](https://lh3.googleusercontent.com/4picxnGImJeqBUL3AIzAX-Vf-Q8bCqnH4An7sGLMUhLW2MhihKHzyYsua73aQYQZYvrzlgR47NGeRVuPM9Fa7ubByzWJqBNSv3bhuwLmjCLmLxKJPJWyAiU_qPzetyJ5mpF4akA45wfET_uqW1GE-TnocGcPTV8RMeJsbXPRgG89gXqauk1x-c1U5CP2U2TYpxdE_JnVUQ-BRe6X63GKfXTqRHfKVOALfhrjuPB4u-Hh-klGWK4GVqTo1PdoUB15QWOhNj_BjaYVLNLOHlxOqgRn8SKzlaMTTqEfuCUUvwpXCQMUzSC8IQ2lFAKQOLnW_kQ3xRuV_qYnuCMYPU18Cy9XE5-m2yHfCdtVserWAjKCRzhGAfmGo2FObb4GMh4b3mksh0kIzkJSEb7El9k_j4CjWc-PS9Xcgp2S2niQIJ-Ikq0I3Otj_vT0ROV81mkHD06jqGbNO6fb5uq8N_nGHMgDHJIeQr5OjAu6-YPRFXwSGTipW8qGZvR8dRHPkDpjTQC6kmGXmYqoQHwioJY-KfGNBLmdjckTRzrqTcCiq9JFjV_AtBMsdMtfWCCnzcueWqb29HESbcuK04ymlmNFzW4Nq0Y=w1044-h1002-nox)
+#### ハッシュタグに紐づく画像の表示
+home画面に遷移した後、画面上部のフォームにハッシュタグを入れて検索すると、ハッシュタグに紐づく画像を一覧で表示します。
+
+#### ハッシュタグの登録
+home画面に遷移した後、画面下部のフォームにハッシュタグを入れると、ハッシュタグを登録できます。
+
+#### 注意
+- TwitterAPIは短時間で何度もアクセスすると、数分間使えないように制限がかかるので注意。
+
+## TODO
+- UIを綺麗にする
+- 登録したハッシュタグから画像一覧を表示させるようにする。

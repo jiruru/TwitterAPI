@@ -1,0 +1,2 @@
+class TwitterHashesController < ApplicationController
+end

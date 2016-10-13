@@ -1,0 +1,21 @@
+<title>show page</title>
+
+<h1>
+  #<%= @show %>
+</h1>
+<% count=0 %>
+<% @result.each do |tweet| %>
+  <div>
+    <% count+=1 %>
+    <%= count %>
+    <%= tweet.user.screen_name %>
+    <%= tweet.created_at %>
+  </div>
+  <div>
+    <% tweet.media.each do |img| %>
+    <img src="<%= img.media_url %>"  width="256px" height="256px">
+  </div>
+<% end %>
+
+<% end %>
+

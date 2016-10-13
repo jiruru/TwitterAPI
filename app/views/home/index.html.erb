@@ -1,0 +1,41 @@
+検索したいハッシュタグを入れてください
+<%= form_for @input, url: home_show_path do |f| %>
+  <%= f.text_field :hash_tag %>
+  <%= f.submit '検索'%>
+<% end %>
+<h1>Mypage</h1>
+
+<h2>
+your name:
+<%= current_user.email%>
+</h2>
+
+<h1>お気に入り</h1>
+<% @user.each do |user| %>
+  <div style="margin: 0px 0;">
+    <hr>
+    <div style="display: inline-block; _display: inline;">
+      <%= user[:hash_tag] %>
+    </div>
+    <div style="margin-left: 5px; display: inline-block; _display: inline;">
+      <%= button_to "削除", home_destroy_path({:hash_tag => user[:hash_tag], :user_name => user[:user_name]}) %>
+    </div>
+  </div>
+<% end %>
+
+<br>
+お気に入り登録したい言葉を入れてください
+<%= form_for @input, url: home_new_path do |f| %>
+  <%= f.text_field :hash_tag %>
+  <%= f.submit '追加'%>
+<% end %>
+
+<br>
+<% if user_signed_in? %>
+  Logged in as <strong><%= current_user.email %></strong>.
+  <%= link_to "Settings", edit_user_registration_path, :class => "navbar-link" %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => "navbar-link" %>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
+<% end %>
