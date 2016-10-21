@@ -3,10 +3,10 @@ class HomeController < ApplicationController
     def initialize
       @client = Twitter::REST::Client.new do |config|
         # ここにトークンを入れる
-        config.consumer_key = "AhY9UvRX1HNcCWOg0x1HC3Vej"
-        config.consumer_secret = "Z2j2mq7DuI1bjtqvP7Ggg334jPWpuUWjAXGNBIOvb6OARV7RiF"
-        config.access_token = "2902660614-w2GGcMUFypMb3IL2LYcGqlIxEBTTQjmttBxho4f"
-        config.access_token_secret = "EGWGi7TErJ0RlsDnPeyA1gcP3XgoehaYZgpQdisSXY6JO"
+        config.consumer_key = ENV['TWITTER_CONSUMER_KEY']
+        config.consumer_secret = ENV['TWITTER_CONSUMER_SEACRET']
+        config.access_token = ENV['TWITTER_ACCESS_TOKEN']
+        config.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SEACRET']
       end
     end
     # 100件まで持ってくる
