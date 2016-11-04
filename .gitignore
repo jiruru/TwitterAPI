@@ -17,3 +17,14 @@
 /tmp
 
 ./vendor
+
+# Ignore other unneeded files.
+doc/
+*.swp
+*~
+.project
+.DS_Store
+.idea
+.secret
+./Gemfile.lock
+./test
